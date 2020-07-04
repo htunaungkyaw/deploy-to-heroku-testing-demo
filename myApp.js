@@ -41,6 +41,16 @@ app.get("/json", (req, res) => {
         message: "Hello json",
       });
 });
+app.get(
+  "/now",
+  (req, res, next) => {
+    req.time = new Date().toLocaleTimeString();
+    next();
+  },
+  (req, res) => {
+    res.json({ time: req.time });
+  }
+);
 
 /** 6) Use the .env file to configure the app */
 
