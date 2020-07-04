@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 /** 4) Serve static assets  */
 
 /** 5) serve JSON on a specific route */
-/*app.get("/json", (req, res) => {
+app.get("/json", (req, res) => {
   process.env.MESSAGE_STYLE === "uppercase"
     ? res.json({
         message: "HELLO JSON",
@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
     : res.json({
         message: "Hello json",
       });
-});*/
+});
 
 /** 6) Use the .env file to configure the app */
 
