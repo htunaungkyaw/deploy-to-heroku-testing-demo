@@ -1,24 +1,21 @@
 {
-  "name": "deploy-to-heroku-testing-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HtunAungKyaw/deploy-to-heroku-testing-demo.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HtunAungKyaw/deploy-to-heroku-testing-demo/issues"
-  },
-  "homepage": "https://github.com/HtunAungKyaw/deploy-to-heroku-testing-demo#readme",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1"
-  }
+	"name": "fcc-learn-node-with-express",
+	"author": "Htun Aung Kyaw",
+	"description": "Basic Node and Express free code camp challenge",
+	"version": "0.1.0",
+	"dependencies": {
+		"body-parser": "^1.15.2",
+		"cookie-parser": "^1.4.3",
+		"dotenv": "^8.2.0",
+		"express": "^4.14.0",
+		"fcc-express-bground": "https://github.com/freeCodeCamp/fcc-express-bground-pkg.git",
+		"nodemon": "^2.0.4"
+	},
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"engines": {
+		"node": "4.7.0"
+	}
 }
