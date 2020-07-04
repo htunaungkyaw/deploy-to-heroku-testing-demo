@@ -52,6 +52,10 @@ app.get(
   }
 );
 
+app.get("/:word/echo", (req, res) => {
+  res.json({ echo: req.params.word });
+});
+
 /** 6) Use the .env file to configure the app */
 
 /** 7) Root-level Middleware - A logger */
