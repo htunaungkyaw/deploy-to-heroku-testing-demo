@@ -70,6 +70,17 @@ app.get(
     res.json({ name: `${req.query.first} ${req.query.last}` });
   }
 );
+app.post(
+  "/name",
+  (res, req, next) => {
+    urlencodedParser;
+    next();
+  },
+  (req, res) => {
+    //const { first, last } = req.query;
+    res.json({ name: `${req.body.first} ${req.body.last}` });
+  }
+);
 
 /** 6) Use the .env file to configure the app */
 
