@@ -10,7 +10,7 @@ app.use(express.static(__dirname + "/public"));
   next();
 });*/
 
-app.use(bodyParser.urlencoded({ extended: false }));
+var urlencodedParser = app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.path} - ${req.ip}`);
@@ -59,10 +59,17 @@ app.get("/:word/echo", (req, res) => {
   res.json({ echo: req.params.word });
 });
 
-app.get("/name", (req, res) => {
-  //const { first, last } = req.query;
-  res.json({ name: `${req.query.first} ${req.query.last}` });
-});
+app.get(
+  "/name",
+  (res, req, next) => {
+    urlencodedParser;
+    next();
+  },
+  (req, res) => {
+    //const { first, last } = req.query;
+    res.json({ name: `${req.query.first} ${req.query.last}` });
+  }
+);
 
 /** 6) Use the .env file to configure the app */
 
