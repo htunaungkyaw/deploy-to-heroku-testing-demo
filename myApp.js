@@ -57,8 +57,8 @@ app.get("/:word/echo", (req, res) => {
 });
 
 app.get("/name", (req, res) => {
-  const { first, last } = req.query;
-  res.json({ name: `${first} ${last}` });
+  //const { first, last } = req.query;
+  res.json({ name: `${req.query.first} ${req.query.last}` });
 });
 
 /** 6) Use the .env file to configure the app */
